@@ -22,10 +22,10 @@ const Sidebar = () => {
       <a href='/assets/Tirivashe Shamhu Resume.pdf' download='Tirivashe Shamhu Resume.pdf' className='flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200'> <GiTie className='w-6 h-6' />  Download Resume</a>
 
       <div className='flex justify-around w-9/12 mx-auto my-5 text-green md:w-full'>
-        <a>
+        <a href="https://github.com/Tirivashe" aria-label='Github'>
           <AiFillGithub className='w-8 h-8 cursor-pointer'/>
         </a>
-        <a>
+        <a href="https://www.linkedin.com/in/tirivashe-shamhu" aria-label='LinkedIn'>
           <AiFillLinkedin className='w-8 h-8 cursor-pointer'/>
         </a>
       </div>
