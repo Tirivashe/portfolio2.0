@@ -36,7 +36,6 @@ const ProjectCard: FC<Props> = ({ project: { name, description, github_url, imag
                 </a>
               </motion.div>
             </motion.div>
-
             <motion.div variants={stagger} initial="initial" animate='animate'>
               <motion.h2 variants={fadeInUp} className='mb-3 text-xl font-medium md:text-2xl'>{name}</motion.h2>
               <motion.h3 variants={fadeInUp} className='mb-3 font-medium'>{description}</motion.h3>
