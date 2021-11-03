@@ -3,10 +3,14 @@ import ServiceCard from '../components/ServiceCard'
 import { services } from '../data'
 import { motion } from 'framer-motion'
 import { fadeInUp, routeAnimation, stagger } from '../animations'
+import Head from 'next/head'
 
 function index() {
   return (
     <motion.div variants={routeAnimation} initial="initial" animate="animate" exit="exit" className='flex flex-col flex-grow px-6 pt-1'>
+      <Head>
+        <title>Web Dev Portfolio | About Me</title>
+      </Head>
       <h5 className='my-3 font-medium'>Software engineer experienced in object-oriented programming, web and mobile development, developing using APIs and full stack development.</h5>
       <div className='flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100' style={{ marginLeft: '-1.5rem', marginRight: '-1.5rem' }}>
         <h6 className='my-3 text-lg font-bold tracking-wide'>What I Offer</h6>
