@@ -17,7 +17,7 @@ const ProjectCard: FC<Props> = ({ project: { name, description, github_url, imag
 
   return (
     <div>
-      <Image src={image_path} alt="img" width={1280} height={600} layout='responsive'className='cursor-pointer' onClick={()=> setShowDetail(id)}/>
+      <Image src={image_path} alt="nothing" width={1280} height={600} layout='responsive'className='cursor-pointer' onClick={()=> setShowDetail(id)}/>
       <p className="my-2 text-center">{name}</p>
 
       {
