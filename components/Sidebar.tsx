@@ -19,13 +19,13 @@ const Sidebar = () => {
         Shamhu
       </h3>
       <p className='px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200'>Software Developer</p>
-      <a href='' download='' className='flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200'> <GiTie className='w-6 h-6' />  Download Resume</a>
+      <a href='/assets/Tirivashe Shamhu Resume.pdf' download='Tirivashe Shamhu Resume.pdf' className='flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200'> <GiTie className='w-6 h-6' />  Download Resume</a>
 
       <div className='flex justify-around w-9/12 mx-auto my-5 text-green md:w-full'>
-        <a href="">
+        <a>
           <AiFillGithub className='w-8 h-8 cursor-pointer'/>
         </a>
-        <a href="">
+        <a>
           <AiFillLinkedin className='w-8 h-8 cursor-pointer'/>
         </a>
       </div>
