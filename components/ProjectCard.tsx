@@ -9,13 +9,11 @@ import { fadeInUp, stagger } from '../animations'
 
 interface Props {
   project: IProject
-  showDetail: number|null
-  setShowDetail: Dispatch<SetStateAction<number | null>>
 }
 
-const ProjectCard: FC<Props> = ({ project: { name, description, github_url, image_path, id, deployed_path, key_techs }, showDetail, setShowDetail }) => {
+const ProjectCard: FC<Props> = ({ project: { name, description, github_url, image_path, id, deployed_path, key_techs } }) => {
 
-  
+  const [showDetail, setShowDetail] = useState<number | null>(null)
 
   return (
     <div>
@@ -39,17 +37,17 @@ const ProjectCard: FC<Props> = ({ project: { name, description, github_url, imag
               </motion.div>
             </motion.div>
 
-            <motion.div variants={stagger}>
+            <motion.div variants={stagger} initial="initial" animate='animate'>
               <motion.h2 variants={fadeInUp} className='mb-3 text-xl font-medium md:text-2xl'>{name}</motion.h2>
               <motion.h3 variants={fadeInUp} className='mb-3 font-medium'>{description}</motion.h3>
-              <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
+              <motion.div variants={fadeInUp} className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
                 { key_techs.map(tech => (
                   <span className='px-2 py-1 my-1 bg-gray-200 rounded-sm dark:bg-dark-200' key={tech}>{tech}</span>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
 
-            <button onClick={()=> setShowDetail(null)} className='absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200'>
+            <button title='.'onClick={()=> setShowDetail(null)} className='absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200'>
               <MdClose size={30} />
             </button>
 

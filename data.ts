@@ -104,7 +104,6 @@ export const projects: IProject[] = [
     image_path: '/images/movie_app_thumbnail.png',
     github_url:'https://github.com/Tirivashe/movie-app',
     deployed_path: "https://shamhu-movie-app.netlify.app",
-    categories: ['react'],
     key_techs: ['React', 'Mui', 'JavaScript']
 
   },
@@ -115,7 +114,6 @@ export const projects: IProject[] = [
     image_path: '/images/github_repo.jpg',
     github_url:'https://github.com/Tirivashe/nextjs-typescript-github-repo',
     deployed_path: "https://shamhu-github-repos.vercel.app",
-    categories: ['react'],
     key_techs: ['React', 'NextJS', 'TypeScript', "Mui"]
 
   },
@@ -126,7 +124,6 @@ export const projects: IProject[] = [
     image_path: '/images/ecommerce_shop.jpg',
     github_url:'https://github.com/Tirivashe/eCommerce-shop-with-nextjs-commercejs-typescript',
     deployed_path: "https://nextjs-typescript-ecommerce-shop.vercel.app",
-    categories: ["react"],
     key_techs: ['React', 'Mui', 'Typescript', 'Commercejs','Stripe']
 
   },
@@ -137,7 +134,6 @@ export const projects: IProject[] = [
     image_path: '/images/pokedex_repo.jpg',
     github_url:'https://github.com/Tirivashe/NextJS-Pokemon',
     deployed_path: "https://pokemon-repo-app.vercel.app",
-    categories: ['react'],
     key_techs: ['React', 'TailwindCSS', 'NextJS']
 
   },
@@ -148,7 +144,6 @@ export const projects: IProject[] = [
     image_path: '/images/todo_app.jpg',
     github_url:'https://github.com/Tirivashe/typescript-todoapp',
     deployed_path: "https://shamhu-todo-app.netlify.app",
-    categories: ['react'],
     key_techs: ['React', 'TailwindCSS', 'Redux Toolkit', 'Typescript', 'Mui']
 
   },
@@ -160,7 +155,6 @@ export const projects: IProject[] = [
     image_path: '/images/weather_app.jpg',
     github_url:'https://github.com/Tirivashe/weather-app',
     deployed_path: "https://shamhu-weather-app.netlify.app/",
-    categories: ['react'],
     key_techs: ['React', 'TailwindCSS']
 
   }

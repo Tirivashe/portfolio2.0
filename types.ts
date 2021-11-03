@@ -19,8 +19,5 @@ export interface IProject {
   image_path: string,
   deployed_path: string,
   github_url: string,
-  categories: Category[],
   key_techs: string[]
 }
-
-export type Category = "react"|"node"|"mongo"|"express"
