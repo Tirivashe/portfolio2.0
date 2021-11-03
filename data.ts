@@ -101,7 +101,7 @@ export const projects: IProject[] = [
     id: 1,
     name: 'Movie App',
     description: "An app that consumes a movie API and showcases the top rated, newest and showing movies currently",
-    image_path: '/static/movie_app_thumbnail.png',
+    image_path: '/movie_app_thumbnail.png',
     github_url:'https://github.com/Tirivashe/movie-app',
     deployed_path: "https://shamhu-movie-app.netlify.app",
     key_techs: ['React', 'Mui', 'JavaScript']
@@ -111,7 +111,7 @@ export const projects: IProject[] = [
     id: 2,
     name: 'GitHub Repository',
     description: "Shows github repositories by selected categories and shows a detailed description",
-    image_path: '/static/github_repo.jpg',
+    image_path: '/github_repo.jpg',
     github_url:'https://github.com/Tirivashe/nextjs-typescript-github-repo',
     deployed_path: "https://shamhu-github-repos.vercel.app",
     key_techs: ['React', 'NextJS', 'TypeScript', "Mui"]
@@ -121,7 +121,7 @@ export const projects: IProject[] = [
     id: 3,
     name: 'E-Commerce Shop',
     description: "A shop that replicates an ecommerce shopping app and utilizes carts, paying and payment confirmation",
-    image_path: '/static/ecommerce_shop.jpg',
+    image_path: '/ecommerce_shop.jpg',
     github_url:'https://github.com/Tirivashe/eCommerce-shop-with-nextjs-commercejs-typescript',
     deployed_path: "https://nextjs-typescript-ecommerce-shop.vercel.app",
     key_techs: ['React', 'Mui', 'Typescript', 'Commercejs','Stripe']
@@ -131,7 +131,7 @@ export const projects: IProject[] = [
     id: 4,
     name: 'Pokedex',
     description: "A smaller app that displays the Pokemon repository and select a pokemon to see details",
-    image_path: '/static/pokedex_repo.jpg',
+    image_path: '/pokedex_repo.jpg',
     github_url:'https://github.com/Tirivashe/NextJS-Pokemon',
     deployed_path: "https://pokemon-repo-app.vercel.app",
     key_techs: ['React', 'TailwindCSS', 'NextJS']
@@ -141,7 +141,7 @@ export const projects: IProject[] = [
     id: 5,
     name: 'Todo App',
     description: "A smaller app that takes tasks to do and keeps track of the tasks and mark them as complete when necessary",
-    image_path: '/static/todo_app.jpg',
+    image_path: '/todo_app.jpg',
     github_url:'https://github.com/Tirivashe/typescript-todoapp',
     deployed_path: "https://shamhu-todo-app.netlify.app",
     key_techs: ['React', 'TailwindCSS', 'Redux Toolkit', 'Typescript', 'Mui']
@@ -152,7 +152,7 @@ export const projects: IProject[] = [
     id: 6,
     name: 'Weather App',
     description: "A weather app that consumes and API shows the weather details of the major cities around the world",
-    image_path: '/static/weather_app.jpg',
+    image_path: '/weather_app.jpg',
     github_url:'https://github.com/Tirivashe/weather-app',
     deployed_path: "https://shamhu-weather-app.netlify.app/",
     key_techs: ['React', 'TailwindCSS']
