@@ -129,6 +129,16 @@ export const projects: IProject[] = [
   },
   {
     id: 4,
+    name: 'Yelp Clone',
+    description: "A Yelp inspired app that shows saved restaurants by the user and can have added reviews and ratings",
+    image_path: '/static/images/yelp_app.jpg',
+    github_url:'https://github.com/Tirivashe/yelp-app',
+    deployed_path: "https://yelp-clone-app.netlify.app/",
+    key_techs: ['React', 'TailwindCSS','Node', 'Express', "Sequelize", "Postgres"]
+
+  },
+  {
+    id: 5,
     name: 'Pokedex',
     description: "A smaller app that displays the Pokemon repository and select a pokemon to see details",
     image_path: '/static/images/pokedex_repo.jpg',
@@ -138,7 +148,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 5,
+    id: 6,
     name: 'Todo App',
     description: "A smaller app that takes tasks to do and keeps track of the tasks and mark them as complete when necessary",
     image_path: '/static/images/todo_app.jpg',
@@ -149,7 +159,7 @@ export const projects: IProject[] = [
   },
 
   {
-    id: 6,
+    id: 7,
     name: 'Weather App',
     description: "A weather app that consumes and API shows the weather details of the major cities around the world",
     image_path: '/static/images/weather_app.jpg',
@@ -157,5 +167,5 @@ export const projects: IProject[] = [
     deployed_path: "https://shamhu-weather-app.netlify.app/",
     key_techs: ['React', 'TailwindCSS']
 
-  }
+  },
 ]
