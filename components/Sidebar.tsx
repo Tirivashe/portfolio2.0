@@ -36,7 +36,7 @@ const Sidebar = () => {
           <span>Norton, Zimbabwe</span>
         </div>
         <p className='my-2'>shaymusts@gmail.com</p>
-        <p className='my-2'>+263774431553</p>
+        <p className='my-2'>+263776202079</p>
       </div>
       <button onClick={() => open('mailto:shaymusts@gmail.com')} className='w-8/12 px-5 py-2 my-2 text-white bg-black rounded-full focus:outline-none bg-gradient-to-r from-green to-blue-400'>Email Me</button>
       <button onClick={changeTheme} className='w-8/12 px-5 py-2 my-2 text-sm text-white bg-black rounded-full bg-gradient-to-r from-green to-blue-400'>Change Theme</button>
