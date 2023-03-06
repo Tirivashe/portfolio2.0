@@ -47,13 +47,13 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   {
     name: 'JavaScript',
-    level: '80%',
+    level: '90%',
     Icon: BsCircleFill
   },
 
   {
     name: 'TypeScript',
-    level: '60%',
+    level: '75%',
     Icon: BsCircleFill
   },
 
@@ -65,7 +65,7 @@ export const languages: ISkill[] = [
 
   {
     name: 'Node',
-    level: '70%',
+    level: '80%',
     Icon: BsCircleFill
   },
 ]
@@ -73,25 +73,25 @@ export const languages: ISkill[] = [
 export const tools: ISkill[] = [
   {
     name: 'VSCode',
-    level: '70%',
+    level: '90%',
     Icon: BsCircleFill
   },
 
   {
     name: 'Git(hub)',
-    level: '65%',
+    level: '85%',
     Icon: BsCircleFill
   },
 
   {
-    name: 'Jira',
-    level: '65%',
+    name: 'Azure DevOps',
+    level: '85%',
     Icon: BsCircleFill
   },
 
   {
-    name: 'AEM',
-    level: '35%',
+    name: 'Solidity',
+    level: '70%',
     Icon: BsCircleFill
   },
 ]
