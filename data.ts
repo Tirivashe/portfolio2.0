@@ -59,10 +59,14 @@ export const languages: ISkill[] = [
 
   {
     name: 'React',
+    level: '85%',
+    Icon: BsCircleFill
+  },
+  {
+    name: 'Next.js',
     level: '80%',
     Icon: BsCircleFill
   },
-
   {
     name: 'Node',
     level: '80%',
@@ -72,17 +76,22 @@ export const languages: ISkill[] = [
 
 export const tools: ISkill[] = [
   {
-    name: 'VSCode',
-    level: '90%',
-    Icon: BsCircleFill
-  },
-
-  {
     name: 'Git(hub)',
     level: '85%',
     Icon: BsCircleFill
   },
 
+  {
+    name: 'Azure DevOps',
+    level: '85%',
+    Icon: BsCircleFill
+  },
+
+  {
+    name: 'Kotlin',
+    level: '70%',
+    Icon: BsCircleFill
+  },
   {
     name: 'Azure DevOps',
     level: '85%',
