@@ -9,13 +9,13 @@ import { IProject, IService, ISkill } from './types'
 export const services: IService[] = [
   {
     title: "Frontend Development",
-    details: "Proficient in HTML, CSS, JS and React, MUI, TailwindCSS to build beautiful UIs",
+    details: "Proficient in HTML, CSS, JavaScript, TypeScript, React, MUI, TailwindCSS to build beautiful UIs",
     Icon: RiComputerLine
   }, 
 
   {
     title: 'Backend Development',
-    details: "Experience with Node, ExpressJS with MongoDB and PostgreSQL to build servers",
+    details: "Experience with Node, ExpressJS, NestJS with MongoDB, PostgreSQL and Prisma to build servers",
     Icon: FaServer
   },
   
@@ -27,7 +27,7 @@ export const services: IService[] = [
 
   {
     title: 'Technical Skills',
-    details: "Experience in Java, Python, TypeScript, Redux used in software development",
+    details: "Experience in Java, Python, Kotlin, Solidity, Redux used in software development",
     Icon: FaCogs
   },
 
