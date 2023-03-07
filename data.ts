@@ -128,6 +128,16 @@ export const projects: IProject[] = [
   },
   {
     id: 3,
+    name: 'Expense Tracker',
+    description: "A fullstack application that allows users to keep track of their expenses, even by category",
+    image_path: '/static/images/expense_app_thumbnail.png',
+    github_url:'https://github.com/Tirivashe/expense-tracker-client',
+    deployed_path: "https://expense-tracker-client-three.vercel.app",
+    key_techs: ['React', 'TypeScript', "Mantine UI", "Redux Toolkit", "NestJS", "Prisma"]
+
+  },
+  {
+    id: 4,
     name: 'E-Commerce Shop',
     description: "A shop that replicates an ecommerce shopping app and utilizes carts, paying and payment confirmation",
     image_path: '/static/images/ecommerce_shop.jpg',
@@ -137,7 +147,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 4,
+    id: 5,
     name: 'Yelp Clone',
     description: "A Yelp inspired app that shows saved restaurants by the user and can have added reviews and ratings",
     image_path: '/static/images/yelp_app.jpg',
@@ -147,7 +157,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 5,
+    id: 6,
     name: 'Pokedex',
     description: "A smaller app that displays the Pokemon repository and select a pokemon to see details",
     image_path: '/static/images/pokedex_repo.jpg',
@@ -157,7 +167,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 6,
+    id: 7,
     name: 'Todo App',
     description: "A smaller app that takes tasks to do and keeps track of the tasks and mark them as complete when necessary",
     image_path: '/static/images/todo_app.jpg',
