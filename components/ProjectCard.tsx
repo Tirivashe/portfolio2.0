@@ -28,10 +28,10 @@ const ProjectCard: FC<Props> = ({ project: { name, description, github_url, imag
                 <Image src={image_path} width={300} height={150} layout='responsive'alt='img' />
               </motion.div>
               <motion.div variants={fadeInUp} className='flex justify-center my-4 space-x-3'>
-                <a href={github_url} className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'>
+                <a href={github_url} target='_blank' className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'>
                   <AiFillGithub /><span>Github</span>
                 </a>
-                <a href={deployed_path} className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'>
+                <a href={deployed_path} target="_blank" className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'>
                   <AiFillProject /><span>Project</span>
                 </a>
               </motion.div>
