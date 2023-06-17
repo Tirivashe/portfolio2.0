@@ -102,9 +102,9 @@ export const projects: IProject[] = [
     name: 'Movie App',
     description: "An app that consumes a movie API and showcases the top rated, newest and showing movies currently",
     image_path: '/static/images/movie_app_thumbnail.png',
-    github_url:'https://github.com/Tirivashe/movie-app',
-    deployed_path: "https://shamhu-movie-app.netlify.app",
-    key_techs: ['React', 'Mui', 'JavaScript']
+    github_url:'https://github.com/Tirivashe/film-hub',
+    deployed_path: "https://shamhu-film-hub.vercel.app",
+    key_techs: ['React', 'Mantine', 'TypeScript', 'React Router', 'React Query']
 
   },
   {
