@@ -9,13 +9,13 @@ import { IProject, IService, ISkill } from './types'
 export const services: IService[] = [
   {
     title: "Frontend Development",
-    details: "Proficient in HTML, CSS, JS and React, MUI, TailwindCSS to build beautiful UIs",
+    details: "Proficient in HTML, CSS, JavaScript, TypeScript, React, MUI, TailwindCSS to build beautiful UIs",
     Icon: RiComputerLine
   }, 
 
   {
     title: 'Backend Development',
-    details: "Experience with Node, ExpressJS with MongoDB and PostgreSQL to build servers",
+    details: "Experience with Node, ExpressJS, NestJS with MongoDB, PostgreSQL and Prisma to build servers",
     Icon: FaServer
   },
   
@@ -27,7 +27,7 @@ export const services: IService[] = [
 
   {
     title: 'Technical Skills',
-    details: "Experience in Java, Python, TypeScript, Redux used in software development",
+    details: "Experience in Java, Python, Kotlin, Solidity, Redux used in software development",
     Icon: FaCogs
   },
 
@@ -47,51 +47,60 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   {
     name: 'JavaScript',
-    level: '80%',
+    level: '90%',
     Icon: BsCircleFill
   },
 
   {
     name: 'TypeScript',
-    level: '60%',
+    level: '75%',
     Icon: BsCircleFill
   },
 
   {
     name: 'React',
+    level: '85%',
+    Icon: BsCircleFill
+  },
+  {
+    name: 'Next.js',
     level: '80%',
     Icon: BsCircleFill
   },
-
   {
     name: 'Node',
-    level: '70%',
+    level: '80%',
     Icon: BsCircleFill
   },
 ]
 
 export const tools: ISkill[] = [
   {
-    name: 'VSCode',
+    name: 'Git(hub)',
+    level: '85%',
+    Icon: BsCircleFill
+  },
+
+  {
+    name: 'Azure DevOps',
+    level: '85%',
+    Icon: BsCircleFill
+  },
+
+  {
+    name: 'Kotlin',
     level: '70%',
     Icon: BsCircleFill
   },
-
   {
-    name: 'Git(hub)',
-    level: '65%',
+    name: 'Azure DevOps',
+    level: '85%',
     Icon: BsCircleFill
   },
 
   {
-    name: 'Jira',
-    level: '65%',
-    Icon: BsCircleFill
-  },
-
-  {
-    name: 'AEM',
-    level: '35%',
+    name: 'Solidity',
+    level: '70%',
     Icon: BsCircleFill
   },
 ]
@@ -119,6 +128,16 @@ export const projects: IProject[] = [
   },
   {
     id: 3,
+    name: 'Expense Tracker',
+    description: "A fullstack application that allows users to keep track of their expenses, even by category",
+    image_path: '/static/images/expense_app_thumbnail.png',
+    github_url:'https://github.com/Tirivashe/expense-tracker-client',
+    deployed_path: "https://expense-tracker-client-three.vercel.app",
+    key_techs: ['React', 'TypeScript', "Mantine UI", "Redux Toolkit", "NestJS", "Prisma"]
+
+  },
+  {
+    id: 4,
     name: 'E-Commerce Shop',
     description: "A shop that replicates an ecommerce shopping app and utilizes carts, paying and payment confirmation",
     image_path: '/static/images/ecommerce_shop.jpg',
@@ -128,7 +147,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 4,
+    id: 5,
     name: 'Yelp Clone',
     description: "A Yelp inspired app that shows saved restaurants by the user and can have added reviews and ratings",
     image_path: '/static/images/yelp_app.jpg',
@@ -138,7 +157,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 5,
+    id: 6,
     name: 'Pokedex',
     description: "A smaller app that displays the Pokemon repository and select a pokemon to see details",
     image_path: '/static/images/pokedex_repo.jpg',
@@ -148,7 +167,7 @@ export const projects: IProject[] = [
 
   },
   {
-    id: 6,
+    id: 7,
     name: 'Todo App',
     description: "A smaller app that takes tasks to do and keeps track of the tasks and mark them as complete when necessary",
     image_path: '/static/images/todo_app.jpg',
