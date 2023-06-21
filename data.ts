@@ -118,6 +118,16 @@ export const projects: IProject[] = [
   },
   {
     id: 2,
+    name: 'Expense Tracker',
+    description: "A fullstack application that allows users to keep track of their expenses, even by category",
+    image_path: '/static/images/expense_app_thumbnail.png',
+    github_url:'https://github.com/Tirivashe/expense-tracker-client',
+    deployed_path: "https://expense-tracker-client-three.vercel.app",
+    key_techs: ['React', 'TypeScript', "Mantine UI", "Redux Toolkit", "NestJS", "Prisma"]
+
+  },
+  {
+    id: 3,
     name: 'GitHub Repository',
     description: "Shows github repositories by selected categories and shows a detailed description",
     image_path: '/static/images/github_repo.jpg',
@@ -126,16 +136,6 @@ export const projects: IProject[] = [
     key_techs: ['React', 'NextJS', 'TypeScript', "Mui"]
 
   },
-  // {
-  //   id: 3,
-  //   name: 'Expense Tracker',
-  //   description: "A fullstack application that allows users to keep track of their expenses, even by category",
-  //   image_path: '/static/images/expense_app_thumbnail.png',
-  //   github_url:'https://github.com/Tirivashe/expense-tracker-client',
-  //   deployed_path: "https://expense-tracker-client-three.vercel.app",
-  //   key_techs: ['React', 'TypeScript', "Mantine UI", "Redux Toolkit", "NestJS", "Prisma"]
-
-  // },
   {
     id: 4,
     name: 'E-Commerce Shop',
