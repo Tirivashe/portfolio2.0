@@ -129,23 +129,42 @@ export const projects: IProject[] = [
   },
   {
     id: 2,
-    name: "Expense Tracker",
+    name: "Home Service Booking App",
     description:
-      "A fullstack application that allows users to keep track of their expenses, even by category",
-    image_path: "/static/images/expense_app_thumbnail.png",
-    github_url: "https://github.com/Tirivashe/expense-tracker-client",
-    deployed_path: "https://expense-tracker-client-three.vercel.app",
+      "A fullstack application that allows users to book for any sort of service they need in their homes from available services",
+    image_path: "/static/images/home-service.png",
+    github_url: "https://github.com/Tirivashe/home-service",
+    deployed_path: "https://shamhu-home-service.vercel.app",
     key_techs: [
-      "React",
+      "Next.js 14",
       "TypeScript",
       "Mantine UI",
-      "Redux Toolkit",
-      "NestJS",
-      "Prisma",
+      "Hygraph CMS",
+      "Urql",
+      "Descope Auth",
+      "GPT-4",
+      "DALL-E 3",
     ],
   },
+  // {
+  //   id: 3,
+  //   name: "Expense Tracker",
+  //   description:
+  //     "A fullstack application that allows users to keep track of their expenses, even by category",
+  //   image_path: "/static/images/expense_app_thumbnail.png",
+  //   github_url: "https://github.com/Tirivashe/expense-tracker-client",
+  //   deployed_path: "https://expense-tracker-client-three.vercel.app",
+  //   key_techs: [
+  //     "React",
+  //     "TypeScript",
+  //     "Mantine UI",
+  //     "Redux Toolkit",
+  //     "NestJS",
+  //     "Prisma",
+  //   ],
+  // },
   {
-    id: 3,
+    id: 4,
     name: "GitHub Repository",
     description:
       "Shows github repositories by selected categories and shows a detailed description",
@@ -184,27 +203,27 @@ export const projects: IProject[] = [
   //   key_techs: ['React', 'TailwindCSS', 'NextJS']
 
   // },
-  {
-    id: 7,
-    name: "Todo App",
-    description:
-      "A smaller app that takes tasks to do and keeps track of the tasks and mark them as complete when necessary",
-    image_path: "/static/images/todo_app.jpg",
-    github_url: "https://github.com/Tirivashe/typescript-todoapp",
-    deployed_path: "https://shamhu-todo-app.netlify.app",
-    key_techs: ["React", "TailwindCSS", "Redux Toolkit", "Typescript", "Mui"],
-  },
+  // {
+  //   id: 7,
+  //   name: "Todo App",
+  //   description:
+  //     "A smaller app that takes tasks to do and keeps track of the tasks and mark them as complete when necessary",
+  //   image_path: "/static/images/todo_app.jpg",
+  //   github_url: "https://github.com/Tirivashe/typescript-todoapp",
+  //   deployed_path: "https://shamhu-todo-app.netlify.app",
+  //   key_techs: ["React", "TailwindCSS", "Redux Toolkit", "Typescript", "Mui"],
+  // },
 
-  {
-    id: 8,
-    name: "Weather App",
-    description:
-      "A weather app that consumes and API shows the weather details of the major cities around the world",
-    image_path: "/static/images/weather_app.jpg",
-    github_url: "https://github.com/Tirivashe/weather-app",
-    deployed_path: "https://shamhu-weather-app.netlify.app/",
-    key_techs: ["React", "TailwindCSS", "JavaScript"],
-  },
+  // {
+  //   id: 8,
+  //   name: "Weather App",
+  //   description:
+  //     "A weather app that consumes and API shows the weather details of the major cities around the world",
+  //   image_path: "/static/images/weather_app.jpg",
+  //   github_url: "https://github.com/Tirivashe/weather-app",
+  //   deployed_path: "https://shamhu-weather-app.netlify.app/",
+  //   key_techs: ["React", "TailwindCSS", "JavaScript"],
+  // },
   {
     id: 9,
     name: "Quiz App",
