@@ -1,4 +1,4 @@
-// reset document css
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 *,
 *::before,
@@ -6,10 +6,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
 html,
 body,
 :root {
-  height: 100%;
+  min-height: 100dvh;
 }
