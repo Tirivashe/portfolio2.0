@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useScramble } from "use-scramble";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import { Text } from "@mantine/core";
 import Loader from "../Loader";
 
