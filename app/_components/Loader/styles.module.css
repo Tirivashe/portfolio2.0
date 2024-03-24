@@ -1,0 +1,14 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #64bbcd;
+  box-shadow: 0 0 0 0 lighten(#64bbcd, 30%);
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  100% {
+    box-shadow: 0 0 0 30px #0000;
+  }
+}

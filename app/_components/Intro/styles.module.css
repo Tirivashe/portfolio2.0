@@ -1,0 +1,15 @@
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999998;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+  overflow: hidden;
+}
