@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main style={{ position: "relative" }}>
       <Intro />
-      {/* <Hero /> */}
+      <Hero />
     </main>
   );
 }
