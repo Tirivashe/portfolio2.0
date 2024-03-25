@@ -49,7 +49,7 @@ const Hero = () => {
         animate="visible"
       >
         <Text ta="center" fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}>
-          I'm{" "}
+          Hi, I'm{" "}
           <Text
             span
             fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
