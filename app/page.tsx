@@ -1,12 +1,12 @@
 "use client";
-import { Stack, StackProps, createPolymorphicComponent } from "@mantine/core";
 import Intro from "./_components/Intro";
 import Hero from "./_components/Hero";
-const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
+import Header from "./_components/Header";
 
 export default function Home() {
   return (
-    <main style={{ position: "relative" }}>
+    <main style={{ position: "relative", overflowX: "hidden" }}>
+      <Header />
       <Intro />
       <Hero />
     </main>
