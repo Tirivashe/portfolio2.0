@@ -7,6 +7,7 @@ import {
 import Logo from "../Logo";
 import styles from "./styles.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useScramble } from "use-scramble";
 const PGroup = createPolymorphicComponent<"nav", GroupProps>(Group);
 
 type Props = {};
@@ -14,6 +15,17 @@ type Props = {};
 const Header = (props: Props) => {
   const navPaths = ["Home", "About", "Experience", "Projects", "Contact"];
   const { scrollY } = useScroll();
+  const navs = navPaths.map((path) => {
+    const { ref, replay } = useScramble({
+      text: path,
+      speed: 1,
+      tick: 1,
+      overflow: true,
+      scramble: 5,
+      range: [97, 122],
+    });
+    return { ref, replay, name: path };
+  });
 
   const bgColor = useTransform(
     scrollY,
@@ -66,10 +78,14 @@ const Header = (props: Props) => {
           boxShadow: boxShadow as unknown as string,
         }}
       >
-        {navPaths.map((path) => (
-          <a key={path} className={styles.link}>
-            {path}
-          </a>
+        {navs.map((path) => (
+          <a
+            key={path.name}
+            ref={path.ref}
+            onMouseOver={path.replay}
+            className={styles.link}
+            style={{ width: path.ref.current?.clientWidth }}
+          />
         ))}
       </PGroup>
       <Button>I am a button</Button>

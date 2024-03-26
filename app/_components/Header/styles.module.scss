@@ -1,3 +1,5 @@
+@import "/_mantine.scss";
+
 .header {
   background: none;
   height: rem(100px);
@@ -8,12 +10,16 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  height: inherit;
-  border: 1px solid red;
   color: whitesmoke;
   font-size: 14px;
 }
 
 .link {
   cursor: pointer;
+  padding: 0.1em;
+  transition: color 0.1s ease-in;
+
+  &:hover {
+    color: $primary-color;
+  }
 }
