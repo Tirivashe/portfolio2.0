@@ -100,11 +100,11 @@ const Header = (props: Props) => {
           <Loader
             styles={{
               width: "8px",
-              background: "var(--mantine-color-green-5)",
+              background: "var(--mantine-color-green-4)",
               animation: "none",
             }}
           />
-          <Text c="green">Open to work</Text>
+          <Text c="green.4">Open to work</Text>
         </Group>
         <Group justify="space-between" align="center">
           {socials.map((social) => (
