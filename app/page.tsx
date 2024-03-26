@@ -1,7 +1,9 @@
 "use client";
-import Intro from "./_components/Intro";
-import Hero from "./_components/Hero";
+
 import Header from "./_components/Header";
+import About from "./_sections/About";
+import Hero from "./_sections/Hero";
+import Intro from "./_sections/Intro";
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
       <Header />
       <Intro />
       <Hero />
+      <About />
     </main>
   );
 }

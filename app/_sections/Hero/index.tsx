@@ -9,9 +9,9 @@ import {
 } from "@mantine/core";
 import React from "react";
 import { Variants, motion } from "framer-motion";
-import Logo from "../Logo";
+import Logo from "../../_components/Logo";
 import styles from "./styles.module.scss";
-import ParticlesComponent from "../Particles";
+import ParticlesComponent from "../../_components/Particles";
 const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {

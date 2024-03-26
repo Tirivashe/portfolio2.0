@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useScramble } from "use-scramble";
 import styles from "./styles.module.scss";
 import { Text } from "@mantine/core";
-import Loader from "../Loader";
+import Loader from "@/app/_components/Loader";
 
 const Intro = () => {
   const { ref } = useScramble({
@@ -15,7 +15,7 @@ const Intro = () => {
     <motion.div
       className={styles.intro}
       initial={{ top: 0, left: 0 }}
-      animate={{ top: "-100dvh" }}
+      animate={{ top: "-100%" }}
       transition={{ duration: 0.5, delay: 2 }}
     >
       <Loader />
