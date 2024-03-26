@@ -1,7 +1,7 @@
 @import "/_mantine.scss";
 
 .header {
-  background: none;
+  background: transparent;
   height: rem(100px);
 }
 
@@ -16,10 +16,44 @@
 
 .link {
   cursor: pointer;
-  padding: 0.1em;
   transition: color 0.1s ease-in;
 
   &:hover {
     color: $primary-color;
   }
+}
+
+.icon {
+  background-color: transparent;
+  border: 1px solid rgba(245, 245, 245, 0.3);
+  border-radius: var(--mantine-radius-xl);
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+
+  @include hover {
+    background-color: rgba(245, 245, 245, 0.2);
+    padding: 8px;
+    border: none;
+  }
+
+  &[data-name="LinkedIn"] {
+    @include hover {
+      color: var(--mantine-color-blue-5);
+    }
+  }
+  &[data-name="WhatsApp"] {
+    @include hover {
+      color: var(--mantine-color-green-5);
+    }
+  }
+  &[data-name="Instagram"] {
+    @include hover {
+      color: var(--mantine-color-red-5);
+    }
+  }
+}
+
+.burger {
+  --burger-color: whitesmoke;
 }

@@ -1,13 +1,17 @@
 import {
+  Burger,
   Button,
   Group,
   GroupProps,
+  Text,
   createPolymorphicComponent,
 } from "@mantine/core";
 import Logo from "../Logo";
 import styles from "./styles.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useScramble } from "use-scramble";
+import { socials } from "@/app/_constants";
+import Loader from "../Loader";
 const PGroup = createPolymorphicComponent<"nav", GroupProps>(Group);
 
 type Props = {};
@@ -22,6 +26,7 @@ const Header = (props: Props) => {
       tick: 1,
       overflow: true,
       scramble: 5,
+      chance: 0.5,
       range: [97, 122],
     });
     return { ref, replay, name: path };
@@ -66,6 +71,7 @@ const Header = (props: Props) => {
         justify="space-between"
         align="center"
         gap="lg"
+        visibleFrom="sm"
         component={motion.nav}
         style={{
           backgroundColor: bgColor as unknown as string,
@@ -79,16 +85,45 @@ const Header = (props: Props) => {
         }}
       >
         {navs.map((path) => (
-          <a
+          <Text
+            span
             key={path.name}
             ref={path.ref}
             onMouseOver={path.replay}
             className={styles.link}
-            style={{ width: path.ref.current?.clientWidth }}
+            size="sm"
           />
         ))}
       </PGroup>
-      <Button>I am a button</Button>
+      <Group gap="xl" visibleFrom="lg">
+        <Group gap="lg">
+          <Loader
+            styles={{
+              width: "8px",
+              background: "var(--mantine-color-green-5)",
+              animation: "none",
+            }}
+          />
+          <Text c="green">Open to work</Text>
+        </Group>
+        <Group justify="space-between" align="center">
+          {socials.map((social) => (
+            <a href={social.url} target="_blank" key={social.name}>
+              <social.icon
+                className={styles.icon}
+                data-name={social.name}
+                size="2.3rem"
+              />
+            </a>
+          ))}
+        </Group>
+      </Group>
+      <Burger
+        opened={false}
+        size="md"
+        hiddenFrom="sm"
+        className={styles.burger}
+      />
     </Group>
   );
 };
