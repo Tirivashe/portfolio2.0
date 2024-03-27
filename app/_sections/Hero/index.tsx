@@ -1,20 +1,19 @@
 "use client";
 import {
-  Button,
   Stack,
   StackProps,
   Text,
-  Title,
   createPolymorphicComponent,
 } from "@mantine/core";
-import React from "react";
-import { Variants, motion } from "framer-motion";
+import React, { useState } from "react";
+import { Variants, motion, useScroll, useTransform } from "framer-motion";
 import Logo from "../../_components/Logo";
 import styles from "./styles.module.scss";
-import ParticlesComponent from "../../_components/Particles";
 const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {
+  const { scrollY } = useScroll();
+  const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
   const rootContainerVariants: Variants = {
     hidden: {
       opacity: 0,
@@ -32,17 +31,14 @@ const Hero = () => {
     },
   };
   return (
-    <section className={styles.container}>
-      <ParticlesComponent />
-      <div className={`${styles.glow} ${styles.glow1}`} />
-      <div className={`${styles.glow} ${styles.glow2}`} />
+    <motion.section className={styles.container}>
       <PStack
-        justify="center"
         align="center"
         gap="xs"
         px="md"
-        w="100%"
-        h="100%"
+        mt="8rem"
+        pos="fixed"
+        style={{ scale: scale as unknown as number }}
         component={motion.div}
         variants={rootContainerVariants}
         initial="hidden"
@@ -81,7 +77,7 @@ const Hero = () => {
           be used.
         </Text>
       </PStack>
-    </section>
+    </motion.section>
   );
 };
 
