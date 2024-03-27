@@ -71,10 +71,10 @@ const Hero = () => {
           w={{ md: "50%", xs: "60%" }}
           c="dimmed"
         >
-          I develop innovative solutions by identifying the problem that needs
-          addressing and creating a meaningful experience that meets the needs
-          of end-users, aligning it with the context in which the product will
-          be used.
+          Passionate developer with experience in building user-friendly
+          applications. Proficient in web, mobile and fullstack development and
+          eager to tackle complex challenges. Let's create something amazing
+          together!
         </Text>
       </PStack>
     </motion.section>
