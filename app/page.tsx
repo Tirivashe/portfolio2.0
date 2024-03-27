@@ -22,7 +22,6 @@ export default function Home() {
   return (
     <main style={{ position: "relative", overflow: "hidden" }}>
       <ParticlesComponent />
-      <div className={`${styles.glow} ${styles.glow1}`} />
       <div className={`${styles.glow} ${styles.glow2}`} />
       <Header />
       <Intro />
