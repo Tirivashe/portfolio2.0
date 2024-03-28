@@ -1,7 +1,19 @@
+@import "/_mantine.scss";
+
 .root {
-  color: whitesmoke;
+  color: black;
   margin: auto;
   overflow: hidden;
-  background-color: var(--mantine-color-black);
-  border-radius: var(--mantine-radius-lg);
+  background-color: var(--mantine-color-white);
+  border-top-left-radius: var(--mantine-radius-lg);
+  border-top-right-radius: var(--mantine-radius-lg);
+}
+
+.container {
+  max-width: 90%;
+
+  @include smaller-than($mantine-breakpoint-md) {
+    max-width: 100%;
+    padding: 0 var(--mantine-spacing-lg);
+  }
 }
