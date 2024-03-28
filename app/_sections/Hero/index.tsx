@@ -45,7 +45,7 @@ const Hero = () => {
         animate="visible"
       >
         <Text ta="center" fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}>
-          Hi, I'm{" "}
+          Hi, I&apos;m{" "}
           <Text
             span
             fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
@@ -73,8 +73,8 @@ const Hero = () => {
         >
           Passionate developer with experience in building user-friendly
           applications. Proficient in web, mobile and fullstack development and
-          eager to tackle complex challenges. Let's create something amazing
-          together!
+          eager to tackle complex challenges. Let&apos;s create something
+          amazing together!
         </Text>
       </PStack>
     </motion.section>
