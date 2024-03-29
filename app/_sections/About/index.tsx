@@ -10,7 +10,7 @@ type Props = {};
 
 const About = (props: Props) => {
   const { scrollYProgress } = useScroll();
-  const width = useTransform(scrollYProgress, [0, 0.4], ["85%", "100%"]);
+  const width = useTransform(scrollYProgress, [0, 0.2], ["85%", "100%"]);
 
   const summaryTextVariants: Variants = {
     hidden: {
@@ -30,12 +30,7 @@ const About = (props: Props) => {
   return (
     <motion.section className={styles.root} style={{ width }}>
       <Space h="100px" />
-      <InfiniteScrollingText
-        text="About Me"
-        textSize="100px"
-        iconSize="2.5rem"
-        color="#00000090"
-      />
+      <InfiniteScrollingText text="About Me" textStrokeColor="#00000090" />
       <Space h="100px" />
       <Container className={styles.container}>
         <Title order={4} py="md" fz="16px" c="dimmed">
