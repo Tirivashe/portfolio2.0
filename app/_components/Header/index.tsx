@@ -35,7 +35,7 @@ const Header = (props: Props) => {
   const bgColor = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(0,0,0,0)", "rgba(255, 255, 255, 0.1)"]
+    ["rgba(0,0,0,0)", "rgba(0, 0, 0, 0.6)"]
   );
   const height = useTransform(scrollY, [0, 100], [100, 40]);
   const paddingHorizontal = useTransform(scrollY, [0, 100], [0, 15]);
