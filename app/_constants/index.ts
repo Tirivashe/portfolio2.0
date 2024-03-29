@@ -23,6 +23,16 @@ export const technicalSkills = [
     icon: "/icon/react.svg",
   },
   {
+    id: 13,
+    name: "Git",
+    icon: "/icon/git.svg",
+  },
+  {
+    id: 12,
+    name: "Graphql",
+    icon: "/icon/graphql.svg",
+  },
+  {
     id: 4,
     name: "Express js",
     icon: "/icon/express.svg",
@@ -31,6 +41,11 @@ export const technicalSkills = [
     id: 8,
     name: "MongoDB",
     icon: "/icon/mongodb.svg",
+  },
+  {
+    id: 13,
+    name: "HTML",
+    icon: "/icon/html.svg",
   },
   {
     id: 5,
