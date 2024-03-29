@@ -2,9 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  gap: 3.5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 99999998;
@@ -12,4 +10,14 @@
   height: 100%;
   background-color: black;
   overflow: hidden;
+}
+
+.container {
+  position: fixed;
+  margin-top: -20%;
+  gap: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
