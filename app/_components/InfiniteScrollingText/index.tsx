@@ -8,30 +8,32 @@ type Props = {
   text: string;
   textSize?: (string & {}) | MantineSize | undefined;
   iconSize?: string;
-  color?: string | undefined;
+  textStrokeColor?: string | undefined;
+  direction?: "left" | "right" | "up" | "down" | undefined;
 };
 
 const InfiniteScrollingText = ({
   text,
-  textSize = "md",
-  iconSize = "3rem",
-  color = "white",
+  textSize = "100px",
+  iconSize = "2.5rem",
+  textStrokeColor = "white",
+  direction = "left",
 }: Props) => {
   return (
-    <Marquee autoFill style={{ overflow: "hidden" }}>
+    <Marquee autoFill style={{ height: "150px" }} direction={direction}>
       <Text
         className={styles.text}
         size={textSize}
         style={{
           WebkitTextStroke: "1px",
-          WebkitTextStrokeColor: color,
+          WebkitTextStrokeColor: textStrokeColor,
         }}
       >
         {text}
       </Text>
       <IconComponents
         size={iconSize}
-        color={color}
+        color={textStrokeColor}
         style={{ margin: "0 30px", opacity: "0.5" }}
       />
     </Marquee>

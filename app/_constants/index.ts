@@ -5,7 +5,6 @@ import {
   IconBrandWhatsapp,
 } from "@tabler/icons-react";
 
-//TODO: Add more skills
 export const technicalSkills = [
   {
     id: 2,
