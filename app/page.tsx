@@ -8,6 +8,7 @@ import Hero from "./_sections/Hero";
 import Intro from "./_sections/Intro";
 import styles from "./styles.module.scss";
 import Lenis from "@studio-freight/lenis";
+import Experience from "./_sections/Experience";
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
       <Intro />
       <Hero />
       <About />
+      <Experience />
     </main>
   );
 }
