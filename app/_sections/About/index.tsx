@@ -48,6 +48,7 @@ const About = (props: Props) => {
               transition={{ staggerChildren: 0.02 }}
               viewport={{ once: true }}
             >
+              {/* !TODO: find a proper key for this loop  */}
               {summary.split(" ").map((word) => (
                 <motion.span
                   style={{ display: "inline-block", marginLeft: "0.3em" }}
