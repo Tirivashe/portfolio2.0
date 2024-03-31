@@ -3,6 +3,10 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandWhatsapp,
+  IconBriefcase,
+  IconBriefcase2,
+  IconPencil,
+  IconSchool,
 } from "@tabler/icons-react";
 
 export const technicalSkills = [
@@ -70,6 +74,41 @@ export const technicalSkills = [
     id: 11,
     name: "CSS",
     icon: "/icon/css.svg",
+  },
+];
+
+export const experience = [
+  {
+    id: 1,
+    title: "BSc Computer Science",
+    company: "Lipscomb University",
+    date: "Aug 2015 - May 2019",
+    location: "Nashville TN, USA",
+    icon: IconSchool,
+  },
+  {
+    id: 2,
+    title: "Web Developer Intern",
+    company: "SoJourn Strategic",
+    date: "Jan 2019 - Apr 2019",
+    location: "Nashville, Tennessee, USA",
+    icon: IconPencil,
+  },
+  {
+    id: 3,
+    title: "Software Development Engineer",
+    company: "Intrinsic Value LLC",
+    date: "Jun 2019 - Jun 2021",
+    location: "Nashville TN, USA",
+    icon: IconBriefcase,
+  },
+  {
+    id: 4,
+    title: "React Web Developer",
+    company: "Letshego Holdings Limited",
+    date: "Jan 2022 - Present",
+    location: "Remote",
+    icon: IconBriefcase2,
   },
 ];
 
