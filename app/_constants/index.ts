@@ -112,6 +112,48 @@ export const experience = [
   },
 ];
 
+export const projects = [
+  {
+    id: 1,
+    title: "Film Hub",
+    description:
+      "A web app that allows you to search for movies and view their details.",
+    git_url: "https://github.com/Tirivashe/film-hub",
+    deployed_url: "https://shamhu-film-hub.vercel.app/",
+    image_url: "/images/film-hub.png",
+    tech: [
+      "React",
+      "Typescript",
+      "Mantine UI",
+      "React Query",
+      "TMDB API",
+      "Vercel",
+      "Vite",
+      "Zustand",
+      "Zod",
+    ],
+  },
+  {
+    id: 2,
+    title: "Home Service Booking App",
+    description:
+      "A web app that allows you to book, complete and cancel home services",
+    git_url: "https://github.com/Tirivashe/home-service",
+    deployed_url: "https://shamhu-home-service.vercel.app/",
+    image_url: "/images/home-service.png",
+    tech: [
+      "Nextjs 14",
+      "TypeScript",
+      "Mantine UI",
+      "Hygraph CMS",
+      "Descope Auth",
+      "Urql",
+      "GPT-4 for data generation for CMS",
+      "DALL-E 3 for image generation for CMS",
+    ],
+  },
+];
+
 export const socials = [
   {
     url: "https://www.linkedin.com/in/tirivashe-shamhu",
