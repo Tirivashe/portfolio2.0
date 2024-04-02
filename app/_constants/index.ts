@@ -117,11 +117,11 @@ export const projects = [
     id: 1,
     title: "Film Hub",
     description:
-      "A web app that allows you to search for movies and view their details.",
+      "Film Hub is a dynamic movie app website that offers a seamless and immersive experience for movie enthusiasts. It provides a user-friendly interface for discovering, exploring, and sharing the latest movie releases and trailers. With recommendations and a wide range of genres, Film Hub is your go-to destination for all things cinema.",
     git_url: "https://github.com/Tirivashe/film-hub",
     deployed_url: "https://shamhu-film-hub.vercel.app/",
     image_url: "/images/film-hub.png",
-    tech: [
+    techs: [
       "React",
       "Typescript",
       "Mantine UI",
@@ -137,19 +137,19 @@ export const projects = [
     id: 2,
     title: "Home Service Booking App",
     description:
-      "A web app that allows you to book, complete and cancel home services",
+      "Introducing 'Home Service' – your one-stop solution for all home service needs. With Home Service, users can effortlessly search for and book a wide range of services right from the comfort of their homes. Whether it's plumbing, electrical, cleaning, or more, Home Service has you covered.",
     git_url: "https://github.com/Tirivashe/home-service",
     deployed_url: "https://shamhu-home-service.vercel.app/",
     image_url: "/images/home-service.png",
-    tech: [
+    techs: [
       "Nextjs 14",
       "TypeScript",
       "Mantine UI",
       "Hygraph CMS",
       "Descope Auth",
       "Urql",
-      "GPT-4 for data generation for CMS",
-      "DALL-E 3 for image generation for CMS",
+      "GPT-4",
+      "DALL-E 3 image generation",
     ],
   },
 ];
