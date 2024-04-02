@@ -9,6 +9,7 @@ import Intro from "./_sections/Intro";
 import styles from "./styles.module.scss";
 import Lenis from "@studio-freight/lenis";
 import Experience from "./_sections/Experience";
+import Projects from "./_sections/Projects";
 
 export default function Home() {
   useEffect(() => {
@@ -21,14 +22,17 @@ export default function Home() {
   }, []);
 
   return (
-    <main style={{ position: "relative", overflow: "hidden" }}>
+    <main className={styles.root}>
       <ParticlesComponent />
-      <div className={`${styles.glow} ${styles.glow2}`} />
       <Header />
+      <div className={styles["glow-container"]}>
+        <div className={`${styles.glow} ${styles.glow2}`} />
+      </div>
       <Intro />
       <Hero />
       <About />
       <Experience />
+      <Projects />
     </main>
   );
 }

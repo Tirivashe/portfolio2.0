@@ -1,0 +1,13 @@
+.root {
+  background-color: #0b0b0e;
+  color: whitesmoke;
+}
+
+.horizontal-scroll {
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
