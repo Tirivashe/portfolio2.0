@@ -48,12 +48,11 @@ const About = (props: Props) => {
               transition={{ staggerChildren: 0.02 }}
               viewport={{ once: true }}
             >
-              {/* !TODO: find a proper key for this loop  */}
-              {summary.split(" ").map((word) => (
+              {summary.split(" ").map((word, idx) => (
                 <motion.span
                   style={{ display: "inline-block", marginLeft: "0.3em" }}
                   variants={summaryTextVariants}
-                  key={word}
+                  key={word + idx}
                 >
                   {word}
                 </motion.span>
