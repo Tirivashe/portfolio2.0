@@ -19,6 +19,7 @@ type Props = {};
 const Header = (props: Props) => {
   const navPaths = ["Home", "About", "Experience", "Projects", "Contact"];
   const { scrollY } = useScroll();
+  // ! TODO: DO NOT LOOP ON A REF
   const navs = navPaths.map((path) => {
     const { ref, replay } = useScramble({
       text: path,
