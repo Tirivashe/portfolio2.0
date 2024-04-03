@@ -10,6 +10,7 @@ import styles from "./styles.module.scss";
 import Lenis from "@studio-freight/lenis";
 import Experience from "./_sections/Experience";
 import Projects from "./_sections/Projects";
+import Contact from "./_sections/Contact";
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
       <About />
       <Experience />
       <Projects />
+      <Contact />
     </main>
   );
 }

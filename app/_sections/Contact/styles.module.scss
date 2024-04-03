@@ -1,0 +1,44 @@
+@import "/_mantine.scss";
+
+.root {
+  min-height: 100dvh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: aliceblue;
+  z-index: 0;
+  position: relative;
+}
+
+.connect-text {
+  color: $primary-color;
+}
+
+.glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  filter: blur(150px);
+  background: linear-gradient(90deg, $primary-color, $primary-color);
+  overflow: hidden;
+}
+
+.icon {
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: var(--mantine-radius-xl);
+  transition: all 0.1s ease-in;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: black;
+  @include hover {
+    background-color: $primary-color;
+    color: aliceblue;
+  }
+}
