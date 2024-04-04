@@ -32,7 +32,7 @@ const Projects = (props: Props) => {
   };
 
   return (
-    <section className={styles["root"]}>
+    <section className={styles["root"]} id="projects">
       <Space h={200} />
       <InfiniteScrollingText text="My Projects" textStrokeColor="#ffffff50" />
       <Space h={100} />

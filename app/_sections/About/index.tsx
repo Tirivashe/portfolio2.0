@@ -28,7 +28,7 @@ const About = (props: Props) => {
   };
 
   return (
-    <motion.section className={styles.root} style={{ width }}>
+    <motion.section className={styles.root} style={{ width }} id="about">
       <Space h="100px" />
       <InfiniteScrollingText text="About Me" textStrokeColor="#00000090" />
       <Space h="100px" />

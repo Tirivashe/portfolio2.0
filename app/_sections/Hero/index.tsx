@@ -56,7 +56,7 @@ const Hero = () => {
   }, [titles, currentTitle]);
 
   return (
-    <motion.section className={styles.container}>
+    <motion.section className={styles.container} id="home">
       <PStack
         align="center"
         justify="center"

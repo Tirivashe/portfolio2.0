@@ -16,6 +16,14 @@ const NavLinkItem = ({ path }: Props) => {
     scramble: 5,
     range: [97, 122],
   });
+
+  const scrollToSection = () => {
+    const sectionId = path.toLowerCase();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     // ? TODO: custom width seems hacky but this will do for now
     <Center w={{ md: 60 }}>
@@ -25,6 +33,7 @@ const NavLinkItem = ({ path }: Props) => {
         className={styles["link"]}
         ref={ref}
         onMouseOver={replay}
+        onClick={scrollToSection}
       />
     </Center>
   );

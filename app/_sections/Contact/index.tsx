@@ -28,7 +28,12 @@ const Contact = (props: Props) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-680, 0]);
   return (
-    <motion.footer className={styles["root"]} ref={rootRef} style={{ y }}>
+    <motion.footer
+      className={styles["root"]}
+      ref={rootRef}
+      style={{ y }}
+      id="contact"
+    >
       <Space h={20} />
       <InfiniteScrollingText
         text="Get in touch"

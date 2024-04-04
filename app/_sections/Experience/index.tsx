@@ -33,7 +33,7 @@ const Experience = (props: Props) => {
   }));
 
   return (
-    <section className={styles.root}>
+    <section className={styles.root} id="history">
       <Space h={100} />
       <InfiniteScrollingText text="Experience" textStrokeColor="#ffffff50" />
       <Space h={100} />
