@@ -9,6 +9,8 @@ import React, { useState } from "react";
 import { Variants, motion, useScroll, useTransform } from "framer-motion";
 import Logo from "../../_components/Logo";
 import styles from "./styles.module.scss";
+import CustomButton from "@/app/_components/CustomButton";
+import { IconArrowUpRight } from "@tabler/icons-react";
 const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {
@@ -86,6 +88,15 @@ const Hero = () => {
             and eager to tackle complex challenges. Let&apos;s create something
             amazing together!
           </Text>
+          <CustomButton
+            text="View Résumé"
+            my="md"
+            rightSection={<IconArrowUpRight />}
+            size="xl"
+            onClick={() => {
+              window.open("/resume.pdf", "_blank");
+            }}
+          />
         </motion.div>
       </PStack>
     </motion.section>
