@@ -7,7 +7,6 @@ import { Text } from "@mantine/core";
 import Loader from "@/app/_components/Loader";
 
 const Intro = () => {
-  //! TODO: Fix the loading intro please!!
   const { ref } = useScramble({
     text: "LOADING THE WEBSITE",
     scramble: 20,
@@ -15,9 +14,9 @@ const Intro = () => {
   return (
     <motion.div
       className={styles.intro}
-      initial={{ top: 0, left: 0 }}
-      animate={{ top: "-100%" }}
-      transition={{ duration: 0.5, delay: 2 }}
+      initial={{ y: 0 }}
+      exit={{ y: "-100vh" }}
+      transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
     >
       <div className={styles.container}>
         <Loader />

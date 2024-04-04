@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "./_components/Header";
 import ParticlesComponent from "./_components/Particles";
 import About from "./_sections/About";
 import Hero from "./_sections/Hero";
-import Intro from "./_sections/Intro";
+import Preloader from "./_sections/Preloader";
 import styles from "./styles.module.scss";
 import Lenis from "@studio-freight/lenis";
 import Experience from "./_sections/Experience";
 import Projects from "./_sections/Projects";
 import Contact from "./_sections/Contact";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: number) {
@@ -22,14 +24,23 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
+    return () => clearTimeout(timeOut);
+  }, []);
+
   return (
     <main className={styles.root}>
+      <AnimatePresence mode="wait">{loading && <Preloader />}</AnimatePresence>
       <ParticlesComponent />
       <Header />
       <div className={styles["glow-container"]}>
         <div className={`${styles.glow} ${styles.glow2}`} />
       </div>
-      <Intro />
       <Hero />
       <About />
       <Experience />
