@@ -7,11 +7,14 @@ type Props = ButtonProps & {
   text: string;
 };
 
-const CustomButton = ({ text, ...rest }: Props) => {
+const CustomButton = ({
+  text,
+  ...rest
+}: Props & React.ComponentPropsWithoutRef<"button">) => {
   return (
     <Button
       component={motion.button}
-      {...rest}
+      {...(rest as any)}
       style={{ backgroundColor: "var(--mantine-color-gray-9)" }}
       classNames={{
         root: styles.root,
