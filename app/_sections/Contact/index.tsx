@@ -76,6 +76,7 @@ const Contact = (props: Props) => {
             <Text
               size="xl"
               ta={{ base: "center", xs: "start" }}
+              w={{ base: "100%", xs: "max-content" }}
               href="mailto:shaymusts@gmail.com"
               component={motion.a}
               style={{
