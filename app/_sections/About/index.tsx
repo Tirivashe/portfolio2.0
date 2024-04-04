@@ -27,6 +27,13 @@ const About = (props: Props) => {
     },
   };
 
+  const scrollToContact = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      window.scrollTo({ behavior: "smooth", top: section.offsetTop });
+    }
+  };
+
   return (
     <motion.section className={styles.root} style={{ width }} id="about">
       <Space h="100px" />
@@ -67,7 +74,12 @@ const About = (props: Props) => {
                 development, and backend development in Go and TypeScript. Web3
                 student and enthusiast
               </Text>
-              <CustomButton text="Let's Chat" />
+              <CustomButton
+                text="Let's Chat"
+                onClick={scrollToContact}
+                size="4rem"
+                radius="lg"
+              />
             </Stack>
           </Grid.Col>
         </Grid>

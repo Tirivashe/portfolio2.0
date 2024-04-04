@@ -21,7 +21,7 @@ const NavLinkItem = ({ path }: Props) => {
     const sectionId = path.toLowerCase();
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({ behavior: "smooth", top: section.offsetTop });
     }
   };
   return (
