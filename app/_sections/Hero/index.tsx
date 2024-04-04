@@ -5,17 +5,28 @@ import {
   Text,
   createPolymorphicComponent,
 } from "@mantine/core";
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Variants, motion, useScroll, useTransform } from "framer-motion";
 import Logo from "../../_components/Logo";
 import styles from "./styles.module.scss";
 import CustomButton from "@/app/_components/CustomButton";
 import { IconArrowUpRight } from "@tabler/icons-react";
+import { useScramble } from "use-scramble";
 const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {
+  const titles = useMemo(
+    () => ["Software", "Web", "Mobile", "Front-end", "Full-stack"],
+    []
+  );
+  const [currentTitle, setCurrentTitle] = useState(titles[0]);
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 800], [1, 0.6]);
+  const { ref } = useScramble({
+    text: currentTitle,
+    speed: 0.8,
+    scramble: 20,
+  });
   const rootContainerVariants: Variants = {
     hidden: {
       opacity: 0,
@@ -32,6 +43,18 @@ const Hero = () => {
       },
     },
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentTitle === titles[titles.length - 1]) {
+        setCurrentTitle(titles[0]);
+      } else {
+        setCurrentTitle(titles[titles.indexOf(currentTitle) + 1]);
+      }
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [titles, currentTitle]);
+
   return (
     <motion.section className={styles.container}>
       <PStack
@@ -75,7 +98,8 @@ const Hero = () => {
             variant="gradient"
             gradient={{ from: "cyan", to: "rgba(255, 255, 255, 1)", deg: 180 }}
           >
-            Software Developer
+            <Text fw="inherit" ta="inherit" fz="inherit" span ref={ref} />{" "}
+            Developer
           </Text>
           <Text
             fz={{ base: 15, md: 20, sm: 18 }}
