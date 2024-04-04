@@ -16,6 +16,7 @@ import React from "react";
 import NavLinkItem from "../NavLinkItem";
 import { useDisclosure } from "@mantine/hooks";
 import NavDrawer from "../NavDrawer";
+import { IconHaze } from "@tabler/icons-react";
 const PGroup = createPolymorphicComponent<"nav", GroupProps>(Group);
 
 type Props = {};
@@ -53,11 +54,11 @@ const Header = (props: Props) => {
         component="header"
         justify="space-between"
         align="center"
-        px="md"
+        px="xl"
         pos="relative"
         className={styles.header}
       >
-        <Button>Logo</Button>
+        <IconHaze size="3.5rem" color="#64bbcd" />
         <PGroup
           className={styles.nav}
           justify="space-between"
