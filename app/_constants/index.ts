@@ -8,6 +8,7 @@ import {
   IconPencil,
   IconSchool,
 } from "@tabler/icons-react";
+export const navPaths = ["Home", "About", "History", "Projects", "Contact"];
 
 export const technicalSkills = [
   {
