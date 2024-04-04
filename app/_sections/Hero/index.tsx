@@ -13,7 +13,7 @@ const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {
   const { scrollY } = useScroll();
-  const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
+  const scale = useTransform(scrollY, [0, 800], [1, 0.6]);
   const rootContainerVariants: Variants = {
     hidden: {
       opacity: 0,
@@ -24,7 +24,7 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        delay: 2.3,
+        delay: 2.6,
         ease: "easeOut",
         when: "beforeChildren",
       },
