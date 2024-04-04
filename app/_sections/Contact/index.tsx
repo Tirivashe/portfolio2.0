@@ -26,7 +26,7 @@ const Contact = (props: Props) => {
     offset: ["start end", "start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-670, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [-680, 0]);
   return (
     <motion.footer className={styles["root"]} ref={rootRef} style={{ y }}>
       <Space h={20} />
