@@ -5,6 +5,7 @@ import { Container, Grid, Space, Stack, Text, Title } from "@mantine/core";
 import { Variants, motion, useScroll, useTransform } from "framer-motion";
 import TechnicalSkills from "../TechnicalSkills";
 import CustomButton from "@/app/_components/CustomButton";
+import { scrollToSection } from "@/utils";
 
 type Props = {};
 
@@ -25,13 +26,6 @@ const About = (props: Props) => {
         ease: "easeOut",
       },
     },
-  };
-
-  const scrollToContact = () => {
-    const section = document.getElementById("contact");
-    if (section) {
-      window.scrollTo({ behavior: "smooth", top: section.offsetTop });
-    }
   };
 
   return (
@@ -76,7 +70,7 @@ const About = (props: Props) => {
               </Text>
               <CustomButton
                 text="Let's Chat"
-                onClick={scrollToContact}
+                onClick={() => scrollToSection("contact")}
                 size="4rem"
                 radius="lg"
               />
