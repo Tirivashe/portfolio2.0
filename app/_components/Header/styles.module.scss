@@ -16,15 +16,6 @@
   font-size: 14px;
 }
 
-.link {
-  cursor: pointer;
-  transition: color 0.1s ease-in;
-
-  &:hover {
-    color: $primary-color;
-  }
-}
-
 .icon {
   background-color: transparent;
   border: 1px solid rgba(245, 245, 245, 0.3);

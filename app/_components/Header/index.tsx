@@ -9,30 +9,17 @@ import {
 import Logo from "../Logo";
 import styles from "./styles.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useScramble } from "use-scramble";
 import { socials } from "@/app/_constants";
 import Loader from "../Loader";
+import React from "react";
+import NavLinkItem from "../NavLinkItem";
 const PGroup = createPolymorphicComponent<"nav", GroupProps>(Group);
 
 type Props = {};
 
 const Header = (props: Props) => {
-  const navPaths = ["Home", "About", "Experience", "Projects", "Contact"];
+  const navPaths = ["Home", "About", "History", "Projects", "Contact"];
   const { scrollY } = useScroll();
-  // ! TODO: DO NOT LOOP ON A REF
-  const navs = navPaths.map((path) => {
-    const { ref, replay } = useScramble({
-      text: path,
-      speed: 1,
-      tick: 1,
-      overflow: true,
-      scramble: 5,
-      chance: 0.5,
-      range: [97, 122],
-    });
-    return { ref, replay, name: path };
-  });
-
   const bgColor = useTransform(
     scrollY,
     [0, 100],
@@ -85,15 +72,10 @@ const Header = (props: Props) => {
           boxShadow: boxShadow as unknown as string,
         }}
       >
-        {navs.map((path) => (
-          <Text
-            span
-            key={path.name}
-            ref={path.ref}
-            onMouseOver={path.replay}
-            className={styles.link}
-            size="sm"
-          />
+        {navPaths.map((path) => (
+          <React.Fragment key={path}>
+            <NavLinkItem path={path} />
+          </React.Fragment>
         ))}
       </PGroup>
       <Group gap="xl" visibleFrom="lg">
