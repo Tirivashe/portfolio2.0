@@ -12,6 +12,7 @@ import Experience from "./_sections/Experience";
 import Projects from "./_sections/Projects";
 import Contact from "./_sections/Contact";
 import { AnimatePresence } from "framer-motion";
+import { Notifications } from "@mantine/notifications";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ export default function Home() {
 
   return (
     <main className={styles.root}>
+      <Notifications />
       <AnimatePresence mode="wait">{loading && <Preloader />}</AnimatePresence>
       <ParticlesComponent />
       <Header />
