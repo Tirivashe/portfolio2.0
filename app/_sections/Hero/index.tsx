@@ -34,48 +34,59 @@ const Hero = () => {
     <motion.section className={styles.container}>
       <PStack
         align="center"
+        justify="center"
         gap="xs"
         px="md"
-        mt="8rem"
         pos="fixed"
-        style={{ scale: scale as unknown as number }}
+        top={0}
+        h="100vh"
         component={motion.div}
         variants={rootContainerVariants}
         initial="hidden"
         animate="visible"
       >
-        <Text ta="center" fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}>
-          Hi, I&apos;m{" "}
+        <motion.div
+          style={{
+            scale,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text ta="center" fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}>
+            Hi, I&apos;m{" "}
+            <Text
+              span
+              fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
+              c="cyan"
+              fw="bolder"
+              ta="center"
+            >
+              Tirivashe
+            </Text>
+          </Text>
           <Text
-            span
             fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
-            c="cyan"
             fw="bolder"
             ta="center"
+            variant="gradient"
+            gradient={{ from: "cyan", to: "rgba(255, 255, 255, 1)", deg: 180 }}
           >
-            Tirivashe
+            Software Developer
           </Text>
-        </Text>
-        <Text
-          fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
-          fw="bolder"
-          ta="center"
-          variant="gradient"
-          gradient={{ from: "cyan", to: "rgba(255, 255, 255, 1)", deg: 180 }}
-        >
-          Software Developer
-        </Text>
-        <Text
-          fz={{ base: 15, md: 20, sm: 18 }}
-          ta="center"
-          w={{ md: "50%", xs: "60%" }}
-          c="dimmed"
-        >
-          Passionate developer with experience in building user-friendly
-          applications. Proficient in web, mobile and fullstack development and
-          eager to tackle complex challenges. Let&apos;s create something
-          amazing together!
-        </Text>
+          <Text
+            fz={{ base: 15, md: 20, sm: 18 }}
+            ta="center"
+            w={{ md: "50%", xs: "60%" }}
+            c="dimmed"
+          >
+            Passionate developer with experience in building user-friendly
+            applications. Proficient in web, mobile and fullstack development
+            and eager to tackle complex challenges. Let&apos;s create something
+            amazing together!
+          </Text>
+        </motion.div>
       </PStack>
     </motion.section>
   );
