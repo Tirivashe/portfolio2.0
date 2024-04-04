@@ -3,6 +3,8 @@
 .header {
   background: transparent;
   height: rem(100px);
+  position: relative;
+  z-index: 2;
 }
 
 .nav {
