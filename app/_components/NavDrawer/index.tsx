@@ -2,6 +2,7 @@ import { navPaths } from "@/app/_constants";
 import { scrollToSection } from "@/utils";
 import { Group, Stack, Text } from "@mantine/core";
 import React from "react";
+import styles from "./styles.module.scss";
 
 type Props = {
   close: () => void;
@@ -14,9 +15,13 @@ const NavDrawer = ({ close }: Props) => {
         {navPaths.map((path, idx) => (
           <React.Fragment key={path}>
             <Group gap="sm" align="center">
-              <Text span fz="1rem" fw="bold" style={{ rotate: "-90deg" }}>{`0${
-                idx + 1
-              }`}</Text>
+              <Text
+                span
+                fz="1rem"
+                fw="bold"
+                style={{ rotate: "-90deg" }}
+                className={styles["link"]}
+              >{`0${idx + 1}`}</Text>
               <Text
                 size="xl"
                 fw="bolder"
