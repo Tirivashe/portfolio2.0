@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./styles.module.scss";
 import {
   Avatar,
@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import InfiniteScrollingText from "@/app/_components/InfiniteScrollingText";
 import { socials } from "@/app/_constants";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ContactForm from "@/app/_components/ContactForm";
 import MagneticElement from "@/app/_components/MagneticElement";
 import Link from "next/link";
@@ -20,8 +20,15 @@ import Link from "next/link";
 type Props = {};
 
 const Contact = (props: Props) => {
+  const rootRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: rootRef,
+    offset: ["start end", "start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-670, 0]);
   return (
-    <footer className={styles["root"]}>
+    <motion.footer className={styles["root"]} ref={rootRef} style={{ y }}>
       <Space h={20} />
       <InfiniteScrollingText
         text="Get in touch"
@@ -109,7 +116,7 @@ const Contact = (props: Props) => {
           <ContactForm />
         </Grid.Col>
       </Grid>
-    </footer>
+    </motion.footer>
   );
 };
 
