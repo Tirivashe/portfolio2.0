@@ -6,10 +6,10 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { notifications } from "@mantine/notifications";
 import { IconCheck, IconCross, IconX } from "@tabler/icons-react";
 import Confetti from "react-confetti";
-import { useWindowSize } from "react-use";
+import { useViewportSize } from "@mantine/hooks";
 
 const ContactForm = () => {
-  const { width, height } = useWindowSize();
+  const { width, height } = useViewportSize();
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -221,7 +221,7 @@ const ContactForm = () => {
       {success && (
         <Confetti
           onConfettiComplete={() => setSuccess(false)}
-          confettiSource={{ x: width / 2, y: height / 2, w: 100, h: 100 }}
+          confettiSource={{ x: width / 2, y: height / 2, w: 50, h: 50 }}
           initialVelocityX={15}
           initialVelocityY={15}
           numberOfPieces={300}
