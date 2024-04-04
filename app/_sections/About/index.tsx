@@ -10,7 +10,7 @@ type Props = {};
 
 const About = (props: Props) => {
   const { scrollYProgress } = useScroll();
-  const width = useTransform(scrollYProgress, [0, 0.2], ["85%", "100%"]);
+  const width = useTransform(scrollYProgress, [0, 0.1], ["90%", "100%"]);
 
   const summaryTextVariants: Variants = {
     hidden: {
