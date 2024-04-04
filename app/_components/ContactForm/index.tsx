@@ -54,10 +54,10 @@ const ContactForm = () => {
 
     try {
       const response = await emailjs.send(
-        process.env.EMAILJS_SERVICE_ID!,
-        process.env.EMAILJS_TEMPLATE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         { ...formValues, "g-recaptcha-response": recaptchaToken },
-        { publicKey: process.env.EMAILJS_PUBLIC_ID! }
+        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID! }
       );
 
       if (response.status === 200) {
@@ -205,7 +205,7 @@ const ContactForm = () => {
       />
       <Group justify="flex-end">
         <ReCAPTCHA
-          sitekey={process.env.RECAPTCHA_SITE_ID!}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_ID!}
           onChange={setRecaptchaToken}
         />
         <Button
