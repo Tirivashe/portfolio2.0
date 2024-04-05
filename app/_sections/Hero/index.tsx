@@ -16,7 +16,7 @@ const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {
   const titles = useMemo(
-    () => ["Software", "Web", "Mobile", "Front-end", "Full-stack"],
+    () => ["Software", "Web", "Mobile", "Frontend", "Fullstack"],
     []
   );
   const [currentTitle, setCurrentTitle] = useState(titles[0]);
