@@ -28,6 +28,7 @@ const TechnicalSkills = (props: Props) => {
     >
       <Text
         component={motion.p}
+        mb={-10}
         fw="bold"
         fz={{ base: "2rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" }}
         style={{
@@ -38,6 +39,7 @@ const TechnicalSkills = (props: Props) => {
       </Text>
       <Text
         component={motion.p}
+        mt={-10}
         fw="bold"
         fz={{ base: "2rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" }}
         style={{
