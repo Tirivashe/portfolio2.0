@@ -22,7 +22,7 @@ const About = (props: Props) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 1.5,
         ease: "easeOut",
       },
     },
@@ -46,7 +46,7 @@ const About = (props: Props) => {
               component={motion.p}
               initial="hidden"
               whileInView="visible"
-              transition={{ staggerChildren: 0.02 }}
+              transition={{ staggerChildren: 0.05 }}
               viewport={{ once: true }}
             >
               {summary.split(" ").map((word, idx) => (
