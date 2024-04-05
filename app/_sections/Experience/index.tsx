@@ -35,7 +35,7 @@ const Experience = (props: Props) => {
   return (
     <section className={styles.root} id="history">
       <Space h={100} />
-      <InfiniteScrollingText text="Experience" textStrokeColor="#ffffff50" />
+      <InfiniteScrollingText text="Work History" textStrokeColor="#ffffff50" />
       <Space h={100} />
       <VerticalTimeline lineColor="#fff" animate={true}>
         {modifiedExperience.map(
