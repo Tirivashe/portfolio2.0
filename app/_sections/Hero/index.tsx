@@ -1,5 +1,7 @@
 "use client";
 import {
+  ActionIcon,
+  Flex,
   Stack,
   StackProps,
   Text,
@@ -10,7 +12,7 @@ import { Variants, motion, useScroll, useTransform } from "framer-motion";
 import Logo from "../../_components/Logo";
 import styles from "./styles.module.scss";
 import CustomButton from "@/app/_components/CustomButton";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { IconArrowUpRight, IconDownload } from "@tabler/icons-react";
 import { useScramble } from "use-scramble";
 const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
@@ -112,15 +114,39 @@ const Hero = () => {
             and eager to tackle complex challenges. Let&apos;s create something
             amazing together!
           </Text>
-          <CustomButton
-            text="View Résumé"
-            my="md"
-            rightSection={<IconArrowUpRight />}
-            size="xl"
-            onClick={() => {
-              window.open("/resume.pdf", "_blank");
-            }}
-          />
+          <Flex gap="md" justify="center" align="center" px="xs">
+            <CustomButton
+              text="View Résumé"
+              my="md"
+              rightSection={<IconArrowUpRight />}
+              size="xl"
+              onClick={() => {
+                window.open("/resume.pdf", "_blank");
+              }}
+            />
+            <ActionIcon
+              size="3.8rem"
+              radius="xl"
+              component={motion.a}
+              whileHover={{
+                backgroundColor: "#64bbcd",
+                scale: 1.1,
+                transition: {
+                  duration: 0.1,
+                  ease: "easeInOut",
+                },
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              style={{ backgroundColor: "var(--mantine-color-gray-9)" }}
+              href="/resume.pdf"
+              download
+            >
+              <IconDownload size="1.7rem" />
+            </ActionIcon>
+          </Flex>
         </motion.div>
       </PStack>
     </motion.section>
