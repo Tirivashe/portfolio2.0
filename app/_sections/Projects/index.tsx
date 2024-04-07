@@ -5,10 +5,12 @@ import styles from "./styles.module.scss";
 import { useScroll, useTransform, motion, Variants } from "framer-motion";
 import { projects } from "@/app/_constants";
 import ProjectCard from "@/app/_components/ProjectCard";
+import { useMediaQuery } from "@mantine/hooks";
 
 type Props = {};
 
 const Projects = (props: Props) => {
+  const isMobile = useMediaQuery("(max-width: 916px)");
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -31,102 +33,177 @@ const Projects = (props: Props) => {
     },
   };
 
+  const desktopContent = (
+    <div
+      style={{
+        height: "200vh",
+      }}
+      ref={scrollRef}
+    >
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          overflow: "hidden",
+        }}
+      >
+        <Group px="lg">
+          <motion.div
+            style={{
+              x,
+              display: "flex",
+              gap: "10rem",
+              width: "max-content",
+            }}
+          >
+            <Stack maw="500px">
+              <Text
+                mb={-20}
+                fz="70px"
+                component={motion.span}
+                initial="initial"
+                whileInView="animate"
+                transition={{ staggerChildren: 0.05 }}
+              >
+                {"Current".split("").map((char, index) => (
+                  <motion.span
+                    key={char + index}
+                    style={{ display: "inline-block" }}
+                    variants={textVariants}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </Text>
+              <Text
+                mt={-20}
+                fz="70px"
+                component={motion.span}
+                initial="initial"
+                whileInView="animate"
+                transition={{ staggerChildren: 0.1, delay: 0.5 }}
+              >
+                {"Works".split("").map((char, index) => (
+                  <motion.span
+                    key={char + index}
+                    style={{ display: "inline-block" }}
+                    variants={textVariants}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </Text>
+              <Text
+                c="dimmed"
+                component={motion.span}
+                initial="initial"
+                whileInView="animate"
+                transition={{ staggerChildren: 0.02, delay: 0.5 }}
+              >
+                {"Here's a section with a curated list of projects showcasing my expertise in web/software development."
+                  .split(" ")
+                  .map((char, index) => (
+                    <motion.span
+                      key={char + index}
+                      style={{ display: "inline-block", margin: "0 2px" }}
+                      variants={textVariants}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+              </Text>
+            </Stack>
+            {projects.map((project) => (
+              <React.Fragment key={project.id}>
+                <ProjectCard project={project} />
+              </React.Fragment>
+            ))}
+          </motion.div>
+        </Group>
+      </div>
+    </div>
+  );
+
+  const mobileContent = (
+    <Stack gap="lg" align="center" px="md">
+      <Stack>
+        <Text
+          mb={-20}
+          ta="center"
+          fz={{ base: "60px", xs: "70px" }}
+          component={motion.span}
+          initial="initial"
+          whileInView="animate"
+          transition={{ staggerChildren: 0.05 }}
+        >
+          {"Current".split("").map((char, index) => (
+            <motion.span
+              key={char + index}
+              style={{ display: "inline-block" }}
+              variants={textVariants}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </Text>
+        <Text
+          mt={-20}
+          ta="center"
+          fz={{ base: "60px", xs: "70px" }}
+          component={motion.span}
+          initial="initial"
+          whileInView="animate"
+          transition={{ staggerChildren: 0.1, delay: 0.5 }}
+        >
+          {"Works".split("").map((char, index) => (
+            <motion.span
+              key={char + index}
+              style={{ display: "inline-block" }}
+              variants={textVariants}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </Text>
+        <Text
+          ta="center"
+          maw={{ base: "100%", md: "20%" }}
+          c="dimmed"
+          component={motion.span}
+          initial="initial"
+          whileInView="animate"
+          transition={{ staggerChildren: 0.02, delay: 0.5 }}
+        >
+          {"Here's a section with a curated list of projects showcasing my expertise in web/software development."
+            .split(" ")
+            .map((char, index) => (
+              <motion.span
+                key={char + index}
+                style={{ display: "inline-block", margin: "0 2px" }}
+                variants={textVariants}
+              >
+                {char}
+              </motion.span>
+            ))}
+        </Text>
+      </Stack>
+      {projects.map((project) => (
+        <React.Fragment key={project.id}>
+          <ProjectCard project={project} />
+        </React.Fragment>
+      ))}
+    </Stack>
+  );
+
   return (
     <section className={styles["root"]} id="projects">
       <Space h={200} />
       <InfiniteScrollingText text="My Projects" textStrokeColor="#ffffff50" />
       <Space h={100} />
-      <div
-        style={{
-          height: "200vh",
-        }}
-        ref={scrollRef}
-      >
-        <div
-          style={{
-            position: "sticky",
-            top: 0,
-            height: "100vh",
-            display: "flex",
-            alignItems: "center",
-            overflow: "hidden",
-          }}
-        >
-          <Group px="lg">
-            <motion.div
-              style={{
-                x,
-                display: "flex",
-                gap: "10rem",
-                width: "max-content",
-              }}
-            >
-              <Stack maw="500px">
-                <Text
-                  mb={-20}
-                  fz="70px"
-                  component={motion.span}
-                  initial="initial"
-                  whileInView="animate"
-                  transition={{ staggerChildren: 0.05 }}
-                >
-                  {"Current".split("").map((char, index) => (
-                    <motion.span
-                      key={char + index}
-                      style={{ display: "inline-block" }}
-                      variants={textVariants}
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
-                </Text>
-                <Text
-                  mt={-20}
-                  fz="70px"
-                  component={motion.span}
-                  initial="initial"
-                  whileInView="animate"
-                  transition={{ staggerChildren: 0.1, delay: 0.5 }}
-                >
-                  {"Works".split("").map((char, index) => (
-                    <motion.span
-                      key={char + index}
-                      style={{ display: "inline-block" }}
-                      variants={textVariants}
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
-                </Text>
-                <Text
-                  c="dimmed"
-                  component={motion.span}
-                  initial="initial"
-                  whileInView="animate"
-                  transition={{ staggerChildren: 0.02, delay: 0.5 }}
-                >
-                  {"Here's a section with a curated list of projects showcasing my expertise in web/software development."
-                    .split(" ")
-                    .map((char, index) => (
-                      <motion.span
-                        key={char + index}
-                        style={{ display: "inline-block", margin: "0 2px" }}
-                        variants={textVariants}
-                      >
-                        {char}
-                      </motion.span>
-                    ))}
-                </Text>
-              </Stack>
-              {projects.map((project) => (
-                <React.Fragment key={project.id}>
-                  <ProjectCard project={project} />
-                </React.Fragment>
-              ))}
-            </motion.div>
-          </Group>
-        </div>
-      </div>
+      {isMobile ? mobileContent : desktopContent}
       <div style={{ height: "50vh" }}></div>
     </section>
   );

@@ -13,6 +13,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { IconArrowUpRight, IconBrandGithub } from "@tabler/icons-react";
 import { Variants, motion } from "framer-motion";
+import { useMediaQuery } from "@mantine/hooks";
 
 type Props = {
   project: {
@@ -29,6 +30,8 @@ type Props = {
 const ProjectCard = ({
   project: { image_url, title, description, git_url, deployed_url, techs },
 }: Props) => {
+  const isMobile = useMediaQuery("(max-width: 458px)");
+  const showDescription = useMediaQuery("(max-width: 900px)");
   const buttonHoverVariants: Variants = {
     whileHover: {
       scale: 1.3,
@@ -41,7 +44,12 @@ const ProjectCard = ({
     },
   };
   return (
-    <Box w={500} h={500} className={styles["card"]}>
+    <Box
+      w={{ base: "auto", sm: 400, lg: 500 }}
+      h={{ base: "auto", sm: 400, lg: 500 }}
+      m="md"
+      className={styles["card"]}
+    >
       <Image
         src={image_url}
         width="100%"
@@ -55,21 +63,25 @@ const ProjectCard = ({
           {title}
         </Title>
         <Stack flex={1} p="lg" gap="md">
-          <Text>{description}</Text>
-          <Text>Tech Stack:</Text>
-          <Group wrap="wrap" gap="sm">
-            {techs.map((tech) => (
-              <React.Fragment key={tech}>
-                <Badge
-                  size="sm"
-                  variant="gradient"
-                  gradient={{ from: "blue", to: "cyan", deg: 90 }}
-                >
-                  {tech}
-                </Badge>
-              </React.Fragment>
-            ))}
-          </Group>
+          {!isMobile && (
+            <Text lineClamp={showDescription ? 3 : 0}>{description}</Text>
+          )}
+          {!isMobile && <Text>Tech Stack:</Text>}
+          {!isMobile && (
+            <Group wrap="wrap" gap="sm">
+              {techs.map((tech) => (
+                <React.Fragment key={tech}>
+                  <Badge
+                    size="sm"
+                    variant="gradient"
+                    gradient={{ from: "blue", to: "cyan", deg: 90 }}
+                  >
+                    {tech}
+                  </Badge>
+                </React.Fragment>
+              ))}
+            </Group>
+          )}
         </Stack>
         <Group justify="space-evenly" align="center">
           <Tooltip label="Open Github">
