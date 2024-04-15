@@ -14,6 +14,7 @@ import styles from "./styles.module.scss";
 import CustomButton from "@/app/_components/CustomButton";
 import { IconArrowUpRight, IconDownload } from "@tabler/icons-react";
 import { useScramble } from "use-scramble";
+import { useMediaQuery } from "@mantine/hooks";
 const PStack = createPolymorphicComponent<"div", StackProps>(Stack);
 
 const Hero = () => {
@@ -21,6 +22,7 @@ const Hero = () => {
     () => ["Software", "Web", "Mobile", "Frontend", "Fullstack"],
     []
   );
+  const isMobile = useMediaQuery("(max-width: 765px)");
   const [currentTitle, setCurrentTitle] = useState(titles[0]);
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 800], [1, 0.6]);
@@ -93,16 +95,36 @@ const Hero = () => {
               Tirivashe
             </Text>
           </Text>
-          <Text
-            fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
-            fw="bolder"
-            ta="center"
-            variant="gradient"
-            gradient={{ from: "cyan", to: "rgba(255, 255, 255, 1)", deg: 180 }}
+          <Flex
+            gap={isMobile ? "0" : "md"}
+            direction={isMobile ? "column" : "row"}
           >
-            <Text fw="inherit" ta="inherit" fz="inherit" span ref={ref} />{" "}
-            Developer
-          </Text>
+            <Text
+              fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
+              fw="bolder"
+              ta="center"
+              variant="gradient"
+              gradient={{
+                from: "cyan",
+                to: "aliceblue",
+                deg: 90,
+              }}
+              ref={ref}
+            />{" "}
+            <Text
+              fz={{ base: 40, lg: 80, sm: 70, xs: 60 }}
+              fw="bolder"
+              ta="center"
+              variant="gradient"
+              gradient={{
+                from: "cyan",
+                to: "aliceblue",
+                deg: 270,
+              }}
+            >
+              Developer
+            </Text>
+          </Flex>
           <Text
             fz={{ base: 15, md: 20, sm: 18 }}
             ta="center"
