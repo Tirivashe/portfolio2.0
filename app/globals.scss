@@ -19,3 +19,7 @@ body,
 body {
   cursor: wait;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
