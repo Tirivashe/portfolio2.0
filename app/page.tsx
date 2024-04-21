@@ -11,10 +11,17 @@ import Lenis from "@studio-freight/lenis";
 import Experience from "./_sections/Experience";
 import Projects from "./_sections/Projects";
 import Contact from "./_sections/Contact";
-import { AnimatePresence } from "framer-motion";
+import {
+  AnimatePresence,
+  useScroll,
+  motion,
+  useTransform,
+} from "framer-motion";
 import { Notifications } from "@mantine/notifications";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+  const color = useTransform(scrollYProgress, [0, 1], ["#444", "#64bbcd"]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const lenis = new Lenis();
@@ -36,6 +43,10 @@ export default function Home() {
 
   return (
     <main className={styles.root}>
+      <motion.div
+        className={styles["scroll-bar"]}
+        style={{ scaleY: scrollYProgress, backgroundColor: color }}
+      ></motion.div>
       <Notifications />
       <AnimatePresence mode="wait">{loading && <Preloader />}</AnimatePresence>
       <ParticlesComponent />
