@@ -59,7 +59,7 @@ const Projects = (props: Props) => {
               width: "max-content",
             }}
           >
-            <Stack maw="500px">
+            <Stack maw="300px">
               <Text
                 mb={-20}
                 fz="70px"

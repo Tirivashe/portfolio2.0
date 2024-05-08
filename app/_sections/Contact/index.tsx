@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./styles.module.scss";
 import {
   Avatar,
@@ -16,10 +16,26 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import ContactForm from "@/app/_components/ContactForm";
 import MagneticElement from "@/app/_components/MagneticElement";
 import Link from "next/link";
+import { useScramble } from "use-scramble";
 
 type Props = {};
 
 const Contact = (props: Props) => {
+  const titles = useMemo(
+    () => ["Connect", "Chat", "Engage", "Collaborate"],
+    []
+  );
+  const [currentTitle, setCurrentTitle] = useState(titles[0]);
+  const { ref } = useScramble({
+    text: currentTitle,
+    speed: 1,
+    scramble: 50,
+    seed: 0,
+    tick: 1,
+    overflow: true,
+    chance: 0.9,
+    ignore: [" ", "!", "?", "_", "-", "{", "}"],
+  });
   const rootRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: rootRef,
@@ -27,6 +43,17 @@ const Contact = (props: Props) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-680, 0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentTitle === titles[titles.length - 1]) {
+        setCurrentTitle(titles[0]);
+      } else {
+        setCurrentTitle(titles[titles.indexOf(currentTitle) + 1]);
+      }
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [titles, currentTitle]);
   return (
     <motion.footer
       className={styles["root"]}
@@ -47,7 +74,7 @@ const Contact = (props: Props) => {
           <Stack gap="3rem">
             <Stack gap="0.5rem">
               <Group gap="lg" align="center">
-                <Text span size="4.3rem" fw="bold">
+                <Text span size="3.8rem" fw="bold">
                   Let&apos;s
                 </Text>
                 <MagneticElement>
@@ -70,12 +97,11 @@ const Contact = (props: Props) => {
               <Group>
                 <Text
                   span
-                  size="4.3rem"
+                  size="3.5rem"
                   fw="bold"
                   className={styles["connect-text"]}
-                >
-                  Connect
-                </Text>
+                  ref={ref}
+                ></Text>
               </Group>
             </Stack>
             <Text

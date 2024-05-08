@@ -5,9 +5,10 @@ import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "My Portfolio App",
+export const metadata: Metadata = {
+  title: "Tirivashe Shamhu Web Portfolio",
   description: "Welcome To Tirivashe Shamhu's Portfolio Website",
 };
 

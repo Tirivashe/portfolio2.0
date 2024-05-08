@@ -116,6 +116,25 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    title: "SpendSense",
+    description:
+      "Introducing SpendSense, your personal money guru in your pocket! SpendSense automatically tracks your spending habits, giving you clear insights into your expenditure. See exactly what you're spending, where your money's going, and identify areas to save.  Take control of your finances today with SpendSense!",
+    git_url: "https://github.com/Tirivashe/spendsense",
+    deployed_url: "https://shamhu-spendsense.vercel.app/",
+    image_url: "/images/spendsense.png",
+    techs: [
+      "React",
+      "Nextjs 14",
+      "Typescript",
+      "Mantine UI",
+      "React Query",
+      "Vercel",
+      "Prisma",
+      "Zod",
+    ],
+  },
+  {
+    id: 2,
     title: "Film Hub",
     description:
       "Film Hub is a dynamic movie app website that offers a seamless and immersive experience for movie enthusiasts. It provides a user-friendly interface for discovering, exploring, and sharing the latest movie releases and trailers. With recommendations and a wide range of genres, Film Hub is your go-to destination for all things cinema.",
@@ -135,7 +154,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Home Service Booking App",
     description:
       "Introducing 'Home Service' – your one-stop solution for all home service needs. With Home Service, users can effortlessly search for and book a wide range of services right from the comfort of their homes. Whether it's plumbing, electrical, cleaning, or more, Home Service has you covered.",
