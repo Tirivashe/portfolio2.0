@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useRef } from "react";
 import styles from "./styles.module.scss";
 import {
   Avatar,
@@ -16,7 +16,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import ContactForm from "@/app/_components/ContactForm";
 import MagneticElement from "@/app/_components/MagneticElement";
 import Link from "next/link";
-import { useScramble } from "use-scramble";
+import { TypeAnimation } from "react-type-animation";
 
 type Props = {};
 
@@ -25,17 +25,6 @@ const Contact = (props: Props) => {
     () => ["Connect", "Chat", "Engage", "Collaborate"],
     []
   );
-  const [currentTitle, setCurrentTitle] = useState(titles[0]);
-  const { ref } = useScramble({
-    text: currentTitle,
-    speed: 1,
-    scramble: 50,
-    seed: 0,
-    tick: 1,
-    overflow: true,
-    chance: 0.9,
-    ignore: [" ", "!", "?", "_", "-", "{", "}"],
-  });
   const rootRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: rootRef,
@@ -43,17 +32,6 @@ const Contact = (props: Props) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-680, 0]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentTitle === titles[titles.length - 1]) {
-        setCurrentTitle(titles[0]);
-      } else {
-        setCurrentTitle(titles[titles.indexOf(currentTitle) + 1]);
-      }
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [titles, currentTitle]);
   return (
     <motion.footer
       className={styles["root"]}
@@ -94,14 +72,14 @@ const Contact = (props: Props) => {
                   />
                 </MagneticElement>
               </Group>
-              <Group>
-                <Text
-                  span
-                  size="3.5rem"
-                  fw="bold"
+              <Group my={-10}>
+                <TypeAnimation
+                  sequence={titles.flatMap((title) => [title, 8000])}
+                  wrapper="span"
+                  speed={20}
                   className={styles["connect-text"]}
-                  ref={ref}
-                ></Text>
+                  repeat={Infinity}
+                />
               </Group>
             </Stack>
             <Text
