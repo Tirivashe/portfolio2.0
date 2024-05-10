@@ -107,7 +107,7 @@ export const experience = [
     id: 4,
     title: "React Web Developer",
     company: "Letshego Holdings Limited",
-    date: "Jan 2022 - Present",
+    date: "Jan 2022 - Jan 2024",
     location: "Remote",
     icon: IconBriefcase2,
   },
